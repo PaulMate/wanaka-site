@@ -55,7 +55,7 @@
     <p class="kicker">Where our experience lies</p>
     <div class="xp" id="xp">
       <div class="xp-nav">
-        <button type="button" class="xp-btn" data-k="dev" aria-expanded="false">Business Central development</button>
+        <button type="button" class="xp-btn on" data-k="dev" aria-expanded="true">Business Central development</button>
         <button type="button" class="xp-btn" data-k="upg" aria-expanded="false">NAV to BC upgrades</button>
         <button type="button" class="xp-btn" data-k="int" aria-expanded="false">Integrations</button>
         <button type="button" class="xp-btn" data-k="whp" aria-expanded="false">Warehouse and production</button>
@@ -63,7 +63,7 @@
         <button type="button" class="xp-btn" data-k="pm" aria-expanded="false">Project management</button>
       </div>
       <div class="xp-panels">
-        <div class="xp-panel" data-k="dev">
+        <div class="xp-panel on" data-k="dev">
           <p class="xp-lead">AL extensions, API extensions and custom business logic, for Business Central Online and on-premises.</p>
           <ul class="tags loose">
             <li>AL extensions</li><li>API extensions</li><li>BC Online and on-premises</li><li>AL</li><li>C/AL</li>
@@ -127,7 +127,6 @@
       root.classList.add("js");
       var btns = root.querySelectorAll(".xp-btn");
       var panels = root.querySelectorAll(".xp-panel");
-      var pinned = null;
       function show(k) {
         btns.forEach(function (b) {
           var on = b.getAttribute("data-k") === k;
@@ -136,16 +135,12 @@
         });
         panels.forEach(function (p) { p.classList.toggle("on", p.getAttribute("data-k") === k); });
       }
-      var canHover = window.matchMedia && window.matchMedia("(hover: hover)").matches;
       btns.forEach(function (b) {
         var k = b.getAttribute("data-k");
-        if (canHover) b.addEventListener("mouseenter", function () { if (!pinned) show(k); });
-        b.addEventListener("click", function () {
-          if (pinned === k) { pinned = null; show(canHover ? k : null); }
-          else { pinned = k; show(k); }
-        });
+        b.addEventListener("mouseenter", function () { show(k); });
+        b.addEventListener("focus", function () { show(k); });
+        b.addEventListener("click", function () { show(k); });
       });
-      root.addEventListener("mouseleave", function () { if (!pinned) show(null); });
     })();
     </script>
   </div>
