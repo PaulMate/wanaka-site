@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="4 32 198 164">
+    <defs>
+      <linearGradient id="mu4" gradientUnits="userSpaceOnUse" x1="0" y1="38" x2="0" y2="136">
+        <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#DCE8F8"/></linearGradient>
+      <linearGradient id="au4" gradientUnits="userSpaceOnUse" x1="0" y1="38" x2="0" y2="136">
+        <stop offset="0" stop-color="#3C9DEB"/><stop offset="1" stop-color="#A5DAFB"/></linearGradient>
+    </defs>
+    <rect x="8" y="38" width="62" height="6" fill="url(#mu4)"/>
+    <rect x="158" y="38" width="40" height="6" fill="url(#mu4)"/>
+    <polygon points="22,38 60,38 75,71.5 59,120.5" fill="url(#mu4)"/>
+    <path d="M104,38 L136,38 L154.5,79.3 L168,38 L188,38 L157.6,131 Q149,141 139.8,131 L106.1,56 Z" fill="url(#mu4)"/>
+    <path d="M80.1,56 Q88,38 104,38 L112,38 L81.6,131 Q73,141 63.8,131 L59,120.5 Z" fill="url(#au4)"/>
+    
+    <defs><linearGradient id="hu3" gradientUnits="userSpaceOnUse" x1="14" y1="0" x2="194" y2="0"><stop offset="0" stop-color="#3C9DEB"/><stop offset="1" stop-color="#A5DAFB"/></linearGradient></defs>
+    <path d="M8,188 C60,185 120,187 190,183 C130,191 60,192 8,188 Z" fill="#5E8FD0" opacity="0.8"/>
+    <path d="M14,170 C60,168 110,166 150,152 S186,120 194,106 C192,128 172,160 150,166 S70,180 14,170 Z" fill="url(#hu3)"/>
+    </svg>
